@@ -23,4 +23,72 @@
     margin-right: 25%;
     text-align: justify;
   }
+
+
+.skills {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 25%;
+  }
+  
+  .skill__item {
+    padding-left: 125px;
+  }
+  
+  .skills__titulo{
+      font-family: 'Fira Sans', sans-serif;
+  }
+  
+  .skills__parrafo {
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .skills__barra__progreso,
+  .skills__barra__progreso::after {
+    position: relative;
+    width: 150px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .skills__barra__progreso::after {
+    content: "";
+    position: absolute;
+    left: -150px;
+    background-color: #ae3faf;
+    transition: 0.1s, background-color 0.2s ease-in-out;
+    animation: skills-barra-progreso 2s ease-in-out forwards;
+  }
+  
+  .skills__barra__progreso--25::after {
+    --skills-barra-progreso: 25%;
+  }
+  
+  .skills__barra__progreso--50::after {
+    --skills-barra-progreso: 50%;
+  }
+  
+  .skills__barra__progreso--70::after {
+    --skills-barra-progreso: 70%;
+  }
+  
+  .skills__barra__progreso--80::after {
+    --skills-barra-progreso: 80%;
+  }
+  
+  .skills__barra__progreso--90::after {
+    --skills-barra-progreso: 90%;
+  }
+  
+  @keyframes skills-barra-progreso {
+    to {
+      transform: translateX(var(--skills-barra-progreso));
+    }
+  }
+  
   
