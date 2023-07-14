@@ -1,0 +1,62 @@
+.formulario {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .form {
+    position: relative;
+    color: #AE3FAF;
+    width: 300px;
+    padding: 1em;
+    border-radius: 25px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #EBC7E6;
+  }
+  
+  .formulario__titulo {
+    font-family:'Fira Sans', sans-serif;
+  }
+  
+  .formulario__contenido {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formulario__label {
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .formulario__checkbox {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+  }
+  
+  .formulario__botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Añadimos un margen superior para separar del contenido anterior */
+  }
+  
+  .formulario__button {
+    background-color: #AE3FAF;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Ajustamos el radio de los bordes */
+    padding: 12px 24px; /* Ajustamos el padding para hacer los botones más grandes */
+    cursor: pointer;
+    margin-right: 10px; /* Agregamos un margen derecho para separar los botones */
+  }
+  
+  
+  textarea {
+    width: 100%;
+    border: 0.5px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 8px 0;
+    resize: none;
+    display: block;
+  }
