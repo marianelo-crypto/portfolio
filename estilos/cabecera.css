@@ -33,3 +33,25 @@
   .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item:hover {
     background: #00f;
   }
+
+  /* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .cabecera__logo .cabecera__logo__imagen {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .cabecera__navegacion .cabecera__navegacion__lista {
+      flex-wrap: wrap;
+      justify-content: center; /* Cambiado de "space-evenly" a "center" */
+      padding: 10px 0;
+    }
+  
+    .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
+      flex: 0 0 50%; /* Cambiado de "33%" a "50%" */
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
