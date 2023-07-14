@@ -60,3 +60,19 @@
     resize: none;
     display: block;
   }
+
+  @media only screen and (max-width: 768px) {
+    .formulario {
+      padding: 20px;
+    }
+  
+    .form {
+      width: 100%;
+      padding: 0.5em;
+      margin-right: 0; /* Eliminar margen derecho */
+    }
+  
+    .formulario__label {
+      font-size: 14px;
+    }
+  }
