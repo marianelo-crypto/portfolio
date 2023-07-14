@@ -20,3 +20,18 @@
         filter: brightness(2) blur(10px);
     }
 }
+.grid-container {
+    width: 45%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.grid-container .grid-item {
+    text-align: center;
+}
+
+.grid-container .grid-item img {
+    width: 100%;
+}
