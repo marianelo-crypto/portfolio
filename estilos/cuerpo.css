@@ -91,4 +91,36 @@
     }
   }
   
+  @media screen and (max-width: 768px) {
+    .skills {
+      display: block;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .skill__item {
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .skills__barra__progreso,
+    .skills__barra__progreso::after {
+      width: 130px; /* Ajusta el ancho de las barras de progreso */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .inicio .inicio__parrafo .inicio__parrafo__LZV {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .portada .portada__imagen .portada__imagen__mujeres {
+      width: 90%; /* Ajusta el ancho de la imagen de las mujeres en la portada */
+      margin: 10px auto;
+      margin-left: 5px; /* Agrega un pequeño margen izquierdo */
+      margin-right: 5px; /* Agrega un pequeño margen derecho */
+    }
+  }
+  
   
