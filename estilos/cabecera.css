@@ -1,0 +1,35 @@
+.cabecera__logo .cabecera__logo__imagen {
+    display: block;
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .cabecera__navegacion {
+    background-color: #AE3FAF;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cabecera__navegacion .cabecera__navegacion__lista {
+    list-style: none;
+    display: flex; /* Alinea los elementos de la lista en una línea */
+  }
+  
+  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    transition: background-color .5s ease-in-out;
+  }
+  
+  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item .cabecera__nav__enlace {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item:hover {
+    background: #00f;
+  }
