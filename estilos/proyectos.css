@@ -1,15 +1,10 @@
+/* Estilos para el elemento .video */
 .video {
-    position: relative;
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    width: 560px;
-    height: 315px;
-    animation: fadeIn 3s ease;
+    width: 100%;
+    height: auto;
 }
 
+/* Animación fadeIn para el elemento .video */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -20,32 +15,45 @@
         filter: brightness(2) blur(10px);
     }
 }
+
+/* Estilos para el contenedor con la clase .grid-container */
 .grid-container {
-    width: 45%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    width: 90%;
+    grid-template-columns: 1fr;
 }
 
+/* Estilos para los elementos con la clase .grid-item */
 .grid-container .grid-item {
     text-align: center;
 }
 
+/* Estilos para las imágenes dentro de elementos con la clase .grid-item */
 .grid-container .grid-item img {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+/* Media query para estilos en la versión de escritorio (más de 768px de ancho) */
+@media screen and (min-width: 768px) {
+    /* Estilos para el elemento .video en la versión de escritorio */
     .video {
-        width: 100%;
-        height: auto;
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 560px;
+        height: 315px;
+        animation: fadeIn 3s ease;
     }
-    
+
+    /* Estilos para el contenedor con la clase .grid-container en la versión de escritorio */
     .grid-container {
-        width: 90%;
-        grid-template-columns: 1fr;
+        width: 45%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
     }
 }
-
 

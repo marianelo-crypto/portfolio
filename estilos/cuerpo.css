@@ -1,126 +1,117 @@
-:root {
-    --color-cuerpo: #f1f1f1;
-    --color-texto: #000;
-    --skills-barra-progreso: 0%;
+/* Estilos para las barras de progreso */
+.skills__barra__progreso {
+  position: relative;
+  width: 130px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  direction: ltr;
+}
+
+/* Estilos para el progreso de la barra */
+.skills__barra__progreso::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ae3faf;
+  border-radius: 5px;
+  animation: fillBar 2s ease-in-out forwards;
+}
+
+/* Estilos para el texto junto a la barra de progreso */
+.skills__parrafo {
+  font-size: 20px;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+}
+
+/* Estilos para diferentes progresos */
+.skills__barra__progreso--25::after {
+  width: 25%;
+}
+
+.skills__barra__progreso--50::after {
+  width: 50%;
+}
+
+.skills__barra__progreso--70::after {
+  width: 70%;
+}
+
+.skills__barra__progreso--80::after {
+  width: 80%;
+}
+
+.skills__barra__progreso--90::after {
+  width: 90%;
+}
+
+/* Animación para llenar la barra de progreso de izquierda a derecha */
+@keyframes fillBar {
+  from {
+    width: 0;
   }
-  
-  .cuerpo {
-    background-color: var(--color-cuerpo);
+  to {
+    width: var(--skills-barra-progreso);
   }
-  
-  .portada .portada__imagen .portada__imagen__mujeres {
-    display: block;
-    margin: 10px auto;
-    width: 50%;
-    height: auto;
+}
+
+/* Estilos para el contenedor de habilidades */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Estilos para cada elemento de habilidad */
+.skill__item {
+  padding-left: 0;
+  width: 100%;
+  max-width: 130px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el párrafo de inicio en pantallas pequeñas (móviles) */
+.inicio .inicio__parrafo .inicio__parrafo__LZV {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Estilos para la imagen de las mujeres en pantallas pequeñas (móviles) */
+.portada .portada__imagen .portada__imagen__mujeres {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  height: auto;
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 768px) {
+  .skills {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-left: 25%;
+    margin-right: 25%;
   }
-  
+
+  .skill__item {
+    flex: 0 0 calc(20% - 10px);
+    margin-bottom: 0;
+  }
+
+  /* Estilos para el párrafo de inicio en pantallas grandes */
   .inicio .inicio__parrafo .inicio__parrafo__LZV {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
     margin-top: 50px;
     margin-left: 25%;
     margin-right: 25%;
-    text-align: justify;
   }
-
-
-.skills {
-    display: flex;
-    margin-top: 50px;
-    margin-left: 25%;
-  }
-  
-  .skill__item {
-    padding-left: 125px;
-  }
-  
-  .skills__titulo{
-      font-family: 'Fira Sans', sans-serif;
-  }
-  
-  .skills__parrafo {
-    text-transform: uppercase;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .skills__barra__progreso,
-  .skills__barra__progreso::after {
-    position: relative;
-    width: 150px;
-    height: 8px;
-    background-color: #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .skills__barra__progreso::after {
-    content: "";
-    position: absolute;
-    left: -150px;
-    background-color: #ae3faf;
-    transition: 0.1s, background-color 0.2s ease-in-out;
-    animation: skills-barra-progreso 2s ease-in-out forwards;
-  }
-  
-  .skills__barra__progreso--25::after {
-    --skills-barra-progreso: 25%;
-  }
-  
-  .skills__barra__progreso--50::after {
-    --skills-barra-progreso: 50%;
-  }
-  
-  .skills__barra__progreso--70::after {
-    --skills-barra-progreso: 70%;
-  }
-  
-  .skills__barra__progreso--80::after {
-    --skills-barra-progreso: 80%;
-  }
-  
-  .skills__barra__progreso--90::after {
-    --skills-barra-progreso: 90%;
-  }
-  
-  @keyframes skills-barra-progreso {
-    to {
-      transform: translateX(var(--skills-barra-progreso));
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .skills {
-      display: block;
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  
-    .skill__item {
-      padding-left: 0;
-      margin-bottom: 20px;
-    }
-  
-    .skills__barra__progreso,
-    .skills__barra__progreso::after {
-      width: 130px; /* Ajusta el ancho de las barras de progreso */
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .inicio .inicio__parrafo .inicio__parrafo__LZV {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  
-    .portada .portada__imagen .portada__imagen__mujeres {
-      width: 90%; /* Ajusta el ancho de la imagen de las mujeres en la portada */
-      margin: 10px auto;
-      margin-left: 5px; /* Agrega un pequeño margen izquierdo */
-      margin-right: 5px; /* Agrega un pequeño margen derecho */
-    }
-  }
-  
-  
+}

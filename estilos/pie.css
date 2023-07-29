@@ -1,10 +1,10 @@
 .pie {
-    margin-top: 50px;
+    margin-top: 30px;
     position: relative;
     bottom: 0;
     background-color: #AE3FAF;
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: block;
     justify-content: center;
     align-items: center;
@@ -13,15 +13,16 @@
 .pie__contenido__parrafo {
     color: #fff;
     font-family: 'Fira Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .pie .pie__rrss .pie__rrss__lista__item {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
 }
 
 .pie .pie__rrss .pie__rrss__lista__item a {
@@ -31,19 +32,15 @@
     font-size: 28px;
     list-style: none;
 }
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
+
+@media (min-width: 767px) {
     .pie {
-        margin-top: 30px;
-        height: 80px;
+        margin-top: 50px;
+        height: 100px;
     }
 
     .pie__contenido__parrafo {
-        font-size: 14px;
-        padding: 20px;
-    }
-
-    .pie .pie__rrss .pie__rrss__lista__item a {
-        font-size: 24px;
+        font-size: 16px;
+        padding: 40px;
     }
 }

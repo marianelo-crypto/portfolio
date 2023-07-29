@@ -1,57 +1,62 @@
+/* Estilos base para ambos tamaños */
 .cabecera__logo .cabecera__logo__imagen {
-    display: block;
-    margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos para la navegación en general */
+.cabecera__navegacion {
+  background-color: #AE3FAF;
+}
+
+/* Estilos para la lista de elementos del menú en dispositivos móviles */
+.cabecera__navegacion .cabecera__navegacion__lista {
+  list-style: none;
+  padding: 10px 0;
+}
+
+/* Estilos para cada elemento del menú en dispositivos móviles */
+.cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  font-family: 'Fira Sans', sans-serif;
+  white-space: nowrap;
+}
+
+/* Estilos para los enlaces dentro de los elementos del menú */
+.cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item .cabecera__nav__enlace {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para el estado de hover (al pasar el mouse) en los elementos del menú */
+.cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item:hover {
+  background: #00f;
+}
+
+/* Estilos para dispositivos de escritorio (anulando algunos estilos) */
+@media only screen and (min-width: 768px) {
+  .cabecera__logo .cabecera__logo__imagen {
     width: 300px;
     height: 300px;
+    margin: 10px auto;
   }
-  
-  .cabecera__navegacion {
-    background-color: #AE3FAF;
+
+  .cabecera__navegacion .cabecera__navegacion__lista {
     display: flex;
     justify-content: center;
   }
-  
-  .cabecera__navegacion .cabecera__navegacion__lista {
-    list-style: none;
-    display: flex; /* Alinea los elementos de la lista en una línea */
-  }
-  
-  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
-    text-transform: uppercase;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 18px;
-    transition: background-color .5s ease-in-out;
-  }
-  
-  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item .cabecera__nav__enlace {
-    display: block;
-    padding: 5px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item:hover {
-    background: #00f;
-  }
 
-  /* Estilos para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    .cabecera__logo .cabecera__logo__imagen {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .cabecera__navegacion .cabecera__navegacion__lista {
-      flex-wrap: wrap;
-      justify-content: center; /* Cambiado de "space-evenly" a "center" */
-      padding: 10px 0;
-    }
-  
-    .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
-      flex: 0 0 50%; /* Cambiado de "33%" a "50%" */
-      text-align: center;
-      font-size: 16px;
-      padding: 10px;
-    }
+  .cabecera__navegacion .cabecera__navegacion__lista .cabecera__navegacion__lista__item {
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: background-color .5s ease-in-out;
+    margin: 0 5px;
   }
-  
+}
+
